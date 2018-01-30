@@ -14,7 +14,7 @@ class EAASpider(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         self.start_urls = ['http://www.eaa.org.hk/en-us/licence-search']
-        self.download_delay = 2 # be a good netizen
+        self.download_delay = 10 # be a good netizen
 
     def parse(self, response):
         return self.brute_force(response)
@@ -27,7 +27,7 @@ class EAASpider(scrapy.Spider):
             formdata={"dnn$ctr2496$LicenceSearch$btnLicenceSearch": 'Search', "dnn$ctr2496$LicenceSearch$txtLicNo":num },
             callback=self.extract
             )
-            sleep(2)    # avoid too many requests taking up the RAM or hard disk swap
+            sleep(10)    # avoid too many requests taking up the RAM or hard disk swap
 
     def extract(self, response):
         # display number of pages crawled

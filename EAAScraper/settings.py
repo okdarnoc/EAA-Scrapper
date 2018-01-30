@@ -19,7 +19,7 @@ MONGO_URI = 'mongodb://localhost:27017/'
 MONGO_DATABASE = 'eaa'
 MONGO_COLLECTION = 'companies'
 
-#BFO crawl
+#BFO crawl for easy progress tracking
 DEPTH_PRIORITY = 1
 SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
 SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
