@@ -3,8 +3,15 @@
 This is a demo of obtaining data from submitting forms using brute-force. Please note that this project is purely for academic purpose, any data obtained form the sample website belongs to its owner. DO NOT NUKE THE WEBSITE.
 
 ## Quickstart
+Change the database in EAAScraper/settings.py to your MongoDB settings. Default configuration:
+```python
+MONGO_URI = 'mongodb://localhost:27017/'
+MONGO_DATABASE = 'eaa'
+MONGO_COLLECTION = 'companies'
+```
+After setting up, run:
 ```bash
-service mongod start # By default MongoDB is set to mongodb://localhost:27017/
+service mongod start
 cd EAAScraper
 pip install -r requirements.txt
 scrapy crawl eaa
