@@ -4,6 +4,7 @@ This is a demo of obtaining data from submitting forms using brute-force. Please
 
 ## Quickstart
 ```bash
+service mongod start # By default MongoDB is set to mongodb://localhost:27017/
 cd EAAScraper
 pip install -r requirements.txt
 scrapy crawl eaa
