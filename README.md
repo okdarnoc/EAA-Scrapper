@@ -20,7 +20,7 @@ scrapy crawl eaa
 ## Key techniques
 1. Submitting multipart/form-data
 2. Dealing with session authentication - the example site uses pre-negotiated values for form requests
-3. Using generators instead of pre-computed list to obtain all possible input
+3. Using generators instead of pre-computed list to obtain all possible input efficiently
 4. Inserting valid records into MongoDB using pipelines
 
 ## Explanation
@@ -28,8 +28,8 @@ This scraper scrapes from [Estate Agents Authority](http://www.eaa.org.hk/en-us/
 
 ![licence-search-empty](Images/empty-form.png)
 
-In the normal manual way, you get the result by inputting a valid licence number in the form.
+In the normal manual way, you get the agent details by inputting a valid licence number in the form.
 
 ![licence-search-result](Images/result.png)
 
-The spider loops through all possible licence number and submit form requests. For the sake of demonstration purpose, we only loop on one alphabet by default.
+The spider loops through all possibilities and submits form requests for each licence number. For the sake of demonstration purpose, we only loop on one alphabet by default.
