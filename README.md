@@ -19,7 +19,7 @@ scrapy crawl eaa
 
 ## Key techniques
 1. Submitting multipart/form-data
-2. Bypassing session authentication - the example site uses pre-negotiated values for form requests
+2. Dealing with session authentication - the example site uses pre-negotiated values for form requests
 3. Using generators instead of pre-computed list to obtain all possible input
 4. Inserting valid records into MongoDB using pipelines
 
