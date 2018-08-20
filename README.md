@@ -1,6 +1,6 @@
 # EAAScraper
 
-This is a demo of obtaining data from submitting forms using brute-force. Please note that this project is purely for academic purpose, any data obtained form the sample website belongs to its owner. DO NOT NUKE THE WEBSITE.
+This bot demonstrates the techniques of obtaining data in a brute-force manner. Please note that this project is purely for academic purpose, any data obtained form the sample website belongs to its owner. DO NOT NUKE THE WEBSITE.
 
 ## Quickstart
 Change the database in EAAScraper/settings.py to your MongoDB settings. Default configuration:
@@ -18,17 +18,17 @@ scrapy crawl eaa
 ```
 
 ## Key techniques
-1. Submit multipart/form-data
-2. Notice that the site uses pre-negotiated values for form requests
-3. Use generators instead of pre-computed list to obtain all possible input
-4. Insert valid records into MongoDB using pipelines
+1. Submitting multipart/form-data
+2. Bypassing session authentication - the example site uses pre-negotiated values for form requests
+3. Using generators instead of pre-computed list to obtain all possible input
+4. Inserting valid records into MongoDB using pipelines
 
 ## Explanation
 This scraper scrapes from [Estate Agents Authority](http://www.eaa.org.hk/en-us/licence-search) to look for real estate agents in Hong Kong.
 
 ![licence-search-empty](Images/empty-form.png)
 
-After inputting a valid licence number, you get the result.
+In the normal manual way, you get the result by inputting a valid licence number in the form.
 
 ![licence-search-result](Images/result.png)
 
